@@ -1,9 +1,9 @@
-pileline{
+pipeline {
     agent any
 
-    stages{
-        stage('echo stage'){
-            steps{
+    stages {
+        stage('echo stage') {
+            steps {
                 sh "echo 'Hello world'"
             }
         }
