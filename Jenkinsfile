@@ -7,5 +7,15 @@ pipeline {
                 sh "echo 'Hello world'"
             }
         }
+        stage('cat readme') {
+            when {
+                branch "fix-*"
+            }
+            steps {
+                sh '''
+                    cat README.md
+                '''
+            }
+        }
     }
 }
